@@ -13,7 +13,7 @@ Algorithm is a step-by-step procedure, which defines a set of instructions to be
 Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation. They are the following −
 
 | Priori Analysis | Posterior Analysis |
-|-----------------|--------------------|
+|-----------------|-----------------|
 |This is a theoretical analysis of an algorithm which refers to its time and space complexity analysis using mathematical (algebraic) methods or using a theoritical model such as a finite state machine. (In short, analysis prior to running on real machine.)Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.|This is an empirical analysis of an algorithm which refers to the statistical analysis of its space and time complexity after it is actualy run on a practical machine. (in short, the selected algorithm is implemented using programming language, then executed on target computer machine and analysed).|
 
 ## Algorithm Complexity
@@ -199,9 +199,17 @@ O(2^N) --> Exponential <br/>
 
 ## Asymtotic Analysis
 
-Big Oh --> Upper bound of a function <br />
-Big Omega --> Lower bound of a function <br />
-Theta --> Average bound of a function <br />
+Asymptotic Analysis is the big idea that handles above issues in analyzing algorithms. In Asymptotic Analysis, we evaluate the performance of an algorithm in terms of input size (we don’t measure the actual running time). We calculate, how does the time (or space) taken by an algorithm increases with the input size.
+
+For example, let us consider the search problem (searching a given item) in a sorted array. One way to search is Linear Search (order of growth is linear) and other way is Binary Search (order of growth is logarithmic). To understand how Asymptotic Analysis solves the above mentioned problems in analyzing algorithms, let us say we run the Linear Search on a fast computer and Binary Search on a slow computer. For small values of input array size n, the fast computer may take less time. But, after certain value of input array size, the Binary Search will definitely start taking less time compared to the Linear Search even though the Binary Search is being run on a slow machine. The reason is the order of growth of Binary Search with respect to input size logarithmic while the order of growth of Linear Search is linear. So the machine dependent constants can always be ignored after certain values of input size.
+
+The main idea of asymptotic analysis is to have a measure of efficiency of algorithms that doesn’t depend on machine specific constants, and doesn’t require algorithms to be implemented and time taken by programs to be compared. Asymptotic notations are mathematical tools to represent time complexity of algorithms for asymptotic analysis. 
+
+The following 3 asymptotic notations are mostly used to represent time complexity of algorithms.
+
+__Big Oh__ --> Upper bound of a function <br />
+__Big Omega__ --> Lower bound of a function <br />
+__Theta__ --> Average bound of a function <br />
 
 ### Big Oh
 
