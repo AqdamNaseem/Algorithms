@@ -1,4 +1,4 @@
-package com.aqdamnaseem.projects.sorting.selection;
+package com.aqdamnaseem.projects.sorting.shell;
 
 /**
  * Shellsort is a simple extension of insertion sort that gains speed by

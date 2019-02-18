@@ -1,4 +1,4 @@
-package com.aqdamnaseem.projects.sorting.selection;
+package com.aqdamnaseem.projects.sorting.insertion;
 
 /**
  * Insertion Sort
