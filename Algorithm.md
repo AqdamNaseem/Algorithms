@@ -199,6 +199,38 @@ O(2^N) --> Exponential <br/>
 
 ## Asymtotic Analysis
 
+Big Oh --> Upper bound of a function <br />
+Big Omega --> Lower bound of a function <br />
+Theta --> Average bound of a function <br />
+
+### Big Oh
+
+   f(n)=O(g(n)) if c and b are positive constants
+   such that f(n) <= c * g(n) for all n > b
+   
+   Example : f(n)=2n+3
+             2n+3 <= ?
+             suppose 2n+3 <= 10n for n > 1
+             then f(n)= O(n) where g(n) = n and c = 10 for all n > 1
+             
+   also 2n+3 <= 2n^2+3n^2 then f(n)= O(n^2)
+   
+   f(n) belongs to the function of class N below
+   
+ 1 < Log N < root N < N < N^2 < N^3 ----- 2^N < 3^N < N^N <br />
+ --->Lower Bound<--average--------->Upper Bound<----------
+ 
+ 
+### Big Omega
+ 
+  f(n)= Omega(g(n)) if c and b are positive constants
+  such that f(n) >= c * g(n) for all n > b
+   
+### Theta
+  
+  f(n)= Theta(g(n)) if c, c1 and b are positive constants
+  such that c1 * g(n)<=f(n) >= c * g(n) for all n > b
+
 
 ## Algorithm Design Techniques
 
