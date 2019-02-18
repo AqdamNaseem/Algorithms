@@ -145,7 +145,7 @@ Lets assume the loop executes for k times
       stmt;                     --> executes N
      }
      
-     O(N+N)=O(N)
+  O(N+N)=O(N)
    
   11.Time Complexity is O(Log Log N)
   
@@ -170,7 +170,7 @@ Lets assume the loop executes for k times
       }                  
      }
     
-   O(2NLogN + N) = O(NLogN)
+   O(NLogN)
    
    
 ## Summary 
