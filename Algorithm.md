@@ -37,10 +37,7 @@ The complexity of an algorithm f(n) gives the running time and/or the storage sp
 
 The following is a list of several popular design approaches:
 
- - __Divide and Conquer Approach__ : It is a top-down approach. The algorithms which follow the divide & conquer techniques involve three steps:
-1. Divide the original problem into a set of subproblems.
-2. Solve every subproblem individually, recursively.
-3. Combine the solution of the subproblems (top level) into a solution of the whole original problem.
+ - __Divide and Conquer Approach__ : It is a top-down approach. The algorithms which follow the divide & conquer techniques involve three steps  (a) Divide the original problem into a set of subproblems. (b) Solve every subproblem individually, recursively. (c) Combine the solution of the subproblems (top level) into a solution of the whole original problem.
 
 - __Greedy Technique__ : Greedy method is used to solve the optimization problem. An optimization problem is one in which we are given a set of input values, which are required either to be maximized or minimized (known as objective), i.e. some constraints or conditions. Greedy Algorithm always makes the choice (greedy criteria) looks best at the moment, to optimize a given objective. The greedy algorithm doesn't always guarantee the optimal solution however it generally produces a solution that is very close in value to the optimal.
 
