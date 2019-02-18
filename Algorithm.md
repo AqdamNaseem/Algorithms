@@ -26,7 +26,54 @@ __Space Factor__ − Space is measured by counting the maximum memory space requ
 
 The complexity of an algorithm f(n) gives the running time and/or the storage space required by the algorithm in terms of n as the size of input data.
 
-## Time Complexity 
+## Common Time Complexities 
+ 
+ 1.Time Complexity is O(N) because the loop executes N times
+ 
+    for(int i=0; i<N; i++){    --> executes N+1 times
+     stmt;                     --> executes N times
+    }
+  
+ 2.Time Complexity is O(N) because the loop executes N times
+ 
+    for(int i=N; i>0; i--){    --> executes N+1 times
+     stmt;                     --> executes N times
+    }
+    
+ 3.Time Complexity is O(N)
+ 
+    for(int i=1; i<N; i=i+2){   
+     stmt;                     --> executes N/2 times
+    }
+    
+ 4.Time Complexity is O(N^2)
+ 
+    for(int i=0; i<N; i++){     --> executes N+1
+      for(int j=0; j<N; j++){   --> executes N*(N+1)
+      stmt;                     --> executes N*N
+      }
+     }
+  
+ 5.Time Complexity is O(N^2)
+ 
+    for(int i=0; i<N; i++){     
+      for(int j=0; j<i; j++){   
+      stmt;                     
+      }
+     }
+     
+Lets trace it out
+
+| i | j | noOfTimes |
+----|---|-----------|
+| 0| 0 | 0 |
+| 0 | 0,1 | 1 |
+|2 | 0,1,2 |  2 |
+|3 | 0,1,2,3 | 3 |
+| N | 0,1,2,3--N | N |
+
+Total Time = 1+2+3+4+5+---N = N(N+1)/2
+ 
 
 ## Classes of Functions
 
