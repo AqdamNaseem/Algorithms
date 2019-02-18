@@ -21,7 +21,6 @@ Efficiency of an algorithm can be analyzed at two different stages, before imple
 Suppose X is an algorithm and n is the size of input data, the time and space used by the algorithm X are the two main factors, which decide the efficiency of X.
 
 __Time Factor__ − Time is measured by counting the number of key operations such as comparisons in the sorting algorithm.
-
 __Space Factor__ − Space is measured by counting the maximum memory space required by the algorithm.
 
 The complexity of an algorithm f(n) gives the running time and/or the storage space required by the algorithm in terms of n as the size of input data.
@@ -64,7 +63,7 @@ The complexity of an algorithm f(n) gives the running time and/or the storage sp
      
 Lets trace it out
 
-| i | j | noOfTimes |
+| i | j | No of Times stmt is executed |
 ----|---|-----------|
 | 0| 0 | 0 |
 | 0 | 0,1 | 1 |
@@ -72,8 +71,43 @@ Lets trace it out
 |3 | 0,1,2,3 | 3 |
 | N | 0,1,2,3--N | N |
 
-Total Time = 1+2+3+4+5+---N = N(N+1)/2
+Total Time = 1+2+3+4+5+---N = N(N+1)/2 => O(N^2)
+
+ 6.Time Complexity is O(root N)
  
+    p=0;
+    for(int i=0; p<N; i++){     
+          p=p+1;           
+     }
+ Its obvious that loop doesnot execute for N times, lets assume its execute for k times
+   i | p | 
+----|---|
+| 1| 0+1 |
+| 2 | 1+2 | 
+|3 | 1+2+3 | 
+|4 | 1+2+3+4 |
+| k | 1+2+3+4---k |
+
+so the loop stops when p > N or k*(k+1)/2 > N or k > root of N
+
+ 7.Time Complexity is O(Log N)
+ 
+    p=0;
+    for(int i=0; p<N; i=i*2){     
+          stmt;           
+     }
+       
+Lets assume the loop executes for k times
+
+ |i|
+ |-|
+ |1|
+ |1*2|
+ |1*2^2|
+ |1*2^3|
+ |1*2^k|
+ 
+ so the loop stops when i >= N or 2^k >= N or k = log N with base 2
 
 ## Classes of Functions
 
