@@ -3,7 +3,7 @@
 Merge Sort is a kind of Divide and Conquer algorithm in computer programrming. It is one of the most popular sorting algorithms and a great way to develop confidence in building recursive algorithms.
 
 <p align="center">
-<img src="https://github.com/AqdamNaseem/Algorithms/blob/master/Sorting/src/com/aqdamnaseem/projects/sorting/merge/images/MergeSort_1.png"></p>
+<img src="https://github.com/AqdamNaseem/Algorithms/blob/master/Sorting/src/com/aqdamnaseem/projects/sorting/merge/images/MergeSort_3.png"></p>
 
 ### Divide and Conquer Strategy
 Using the Divide and Conquer technique, we divide a problem into subproblems. When the solution to each subproblem is ready, we 'combine' the results from the subproblems to solve the main problem.
@@ -61,5 +61,54 @@ Have we reached the end of any of the arrays?
         Copy all remaining elements of non-empty array
 
 <p align="center">
-<img src="https://github.com/AqdamNaseem/Algorithms/blob/master/Sorting/src/com/aqdamnaseem/projects/sorting/merge/images/MergeSort_3.png">
+<img src="https://github.com/AqdamNaseem/Algorithms/blob/master/Sorting/src/com/aqdamnaseem/projects/sorting/merge/images/MergeSort_1.png">
  </p>
+ 
+ ### Implementation
+ 
+
+	void merge_sort(int A[], int start, int end) {
+		if (start < end) {
+			int mid = (start + end) / 2; // defines the current array in 2 parts
+											// .
+			merge_sort(A, start, mid); // sort the 1st part of array .
+			merge_sort(A, mid + 1, end); // sort the 2nd part of array.
+
+			// merge the both parts by comparing elements of both the parts.
+			merge(A, start, mid, end);
+		}
+	}
+
+	void merge(int A[], int start, int mid, int end) {
+		// stores the starting position of both parts in temporary variables.
+		int p = start, q = mid + 1;
+
+		int[] Arr = new int[end - start + 1];
+		int k = 0;
+
+		for (int i = start; i <= end; i++) {
+			if (p > mid) // checks if first part comes to an end or not .
+				Arr[k++] = A[q++];
+
+			else if (q > end) // checks if second part comes to an end or not
+				Arr[k++] = A[p++];
+
+			else if (A[p] < A[q]) // checks which part has smaller element.
+				Arr[k++] = A[p++];
+
+			else
+				Arr[k++] = A[q++];
+		}
+		for (int j = 0; j < k; j++) {
+			/*
+			 * Now the real array has elements in sorted manner including both
+			 * parts.
+			 */
+			A[start++] = Arr[j];
+		}
+	}
+
+### Time Complexity
+
+The list of size N is divided into a max of Log N parts, and the merging of all sublists into a single list takes O(N)time, the worst case run time of this algorithm is O(N Log N)
+
