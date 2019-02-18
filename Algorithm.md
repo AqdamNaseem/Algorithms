@@ -187,6 +187,16 @@ Lets assume the loop executes for k times
     
 ## Classes of Functions
 
+O(1) --> Constant
+O(Log N) --> Logarithmic
+O(N) --> Linear
+O(N^2) --> Quadratic
+O(N^3) --> Cubic
+O(2^N) --> Exponential
+
+### Comparison
+ 1 < Log N < root N < N < N^2 < N^3 -----2^N < 3^N < N^N
+
 ## Asymtotic Analysis
 
 
