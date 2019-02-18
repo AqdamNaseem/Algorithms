@@ -319,4 +319,94 @@ __Merge sort__
 - Sorts in place : No 
 - Running time : O(N Log N)
 
+## Divide And Conquer Strategy
+
+Commom algorithms using this strategy are :
+
+Binary Search
+Finding Maximum and Minumum 
+MergeSort 
+Quick Sort 
+Strassen's Matrix Multiplication
+
+It uses recursive approach so we should how to write recursive code and how to analyze it for time and space complexity.
+
+Lets see how to write a recurrence relation for a recursice code
+
+                   void test(int n){
+                    if(n>0){
+                    print(n);     --> This consumes 1 or constant unit of time
+                    test(n-1);
+                    }
+                   }
+                   
+ Assume test take T(n) time, so we can say T(n)=T(n-1)+1
+ 
+ 
+ T(n) = T(n-1)+1 when n > 0 <br />
+      = 1 when n = 0 <br />
+ T(n) = T(n-2) + 1 + 1 <br />
+ 
+ it the loop goes for k times then T(n)=T(n-k) + k, when k approches n then T(n) =T(n-n)+ n or, T(n)=1+n or, T(n) = O(n)
+ 
+ We will see another example
+ 
+                   void test(int n){  ----> T(n)
+                    if(n>0){
+                      for(int i=0;i<n;i=i*2){
+                       print(n);     -----> Log n
+                      test(n-1);     ----> T(n-1)
+                      }
+                    }
+                   }
+ 
+ 
+   T(n)<br />
+ Log(n) + T(n-1)<br />
+            Log(n-1) + T(n-2)<br />
+                       Log(n-2) + T(n-3)<br />
+
+ now the recurrence relation T(n)=T(n-1) + Log n <br />
+ T(n)=T(n-2)+ Log(n-1)+ Log n<br />
+ T(n)=T(n-k)+Log(n-k+1)+----+Log n
+ when k approaches n <br />
+ T(n) = T(0) + Log 1 +Log 2 + Log3 ----Log n
+ T(n) = 1 + Log(1 * 2 * 3 * 4 --- * n)
+ T(n) = 1 + Log(n!)
+ 
+ we know that for n! the upper bound is n^n the for Log(n!) the time complexity will be O(nLogn)
+
+Note : We are not considering the loop and condition check bacause even if you consider the the degree of the expression will be same as Log N i.e N(for condition) + (Log N +1)(for for loop) + Log N(for print)= 2Log N + 2 or, Log N
+ 
+## Master Theorem
+
+Many algorithms are recursive in nature. When we analyze them, we get a recurrence relation for time complexity. We get running time on an input of size n as a function of n and the running time on inputs of smaller sizes. For example in Merge Sort, to sort a given array, we divide it in two halves and recursively repeat the process for the two halves. Finally we merge the results. Time complexity of Merge Sort can be written as T(n) = 2T(n/2) + cn. There are many other algorithms like Binary Search, Tower of Hanoi, etc.
+
+There are mainly three ways for solving recurrences : Substitution Method, Recurrence Tree Method and Master Method
+
+Master Method is a direct way to get the solution. The master method works only for following type of recurrences or for recurrences that can be transformed to following type.
+
+T(n) = aT(n/b) + f(n) where a >= 1 and b > 1
+
+There are following three cases:
+
+1. If f(n) = Θ(n^c) where c < Log a base b then T(n) = Θ(nLoga base b)
+
+2. If f(n) = Θ(n^c) where c = Loga base b then T(n) = Θ(ncLog n)
+
+3.If f(n) = Θ(n^c) where c > Loga base b then T(n) = Θ(f(n))
+
+Examples of some standard algorithms whose time complexity can be evaluated using Master Method 
+
+Merge Sort: T(n) = 2T(n/2) + Θ(n). It falls in case 2 as c is 1 and Logba] is also 1. So the solution is Θ(n Logn)
+
+Binary Search: T(n) = T(n/2) + Θ(1). It also falls in case 2 as c is 0 and Logba is also 0. So the solution is Θ(Logn)
+
+Notes: 
+
+1) It is not necessary that a recurrence of the form T(n) = aT(n/b) + f(n) can be solved using Master Theorem. The given three cases have some gaps between them. For example, the recurrence T(n) = 2T(n/2) + n/Logn cannot be solved using master method.
+      
+ 
+
+
 
