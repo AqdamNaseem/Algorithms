@@ -92,8 +92,8 @@ so the loop stops when p > N or k*(k+1)/2 > N or k > root of N
 
  7.Time Complexity is O(Log N)
  
-    p=0;
-    for(int i=0; p<N; i=i*2){     
+    
+    for(int i=0; i<N; i=i*2){     
           stmt;           
      }
        
@@ -107,8 +107,84 @@ Lets assume the loop executes for k times
  |1*2^3|
  |1*2^k|
  
- so the loop stops when i >= N or 2^k >= N or k = log N with base 2
+ so the loop stops when i >= N or 2^k >= N or k = Log N with base 2
+ 
+ 8.Time Complexity is O(Log N)
+ 
+    
+    for(int i=N; i>=1; i=i/2){     
+          stmt;           
+     }
+     
+   Assume i < 1 or n/2^k < 1 or n/2^k=1 or  k = Log n with base 2
+   
+ |i|
+ |-|
+ |N|
+ |N/2|
+ |N/4|
+ |N/2^k|
+ 
+  9.Time Complexity is O(root N)
+ 
+    
+    for(int i=0; i*i<N; i=++){     
+          stmt;           
+     }
+     
+ i^2 < N
+ or i = root N
+ 
+ 10.Time Complexity is O(N)
+ 
+    for(int i=0; i<N; i++){     --> executes N+1
+      stmt;                     --> executes N
+     }
+     
+     for(int j=0; j<N; j++){   --> executes N+1
+      stmt;                     --> executes N
+     }
+     
+     O(N+N)=O(N)
+   
+  11.Time Complexity is O(Log Log N)
+  
+    p=0
+    for(int i=0; i<N; i=i*2){    
+      p++;                   -->p = Log N
+     }
+     
+     for(int j=0; j<p; j=j*2){   
+      stmt;                     --> Log P(individual complexity)
+     }
+     
+   O(Log Log N)
+     
+     
+   12.Time Complexity is O(NLogN)
+  
+   
+    for(int i=0; i<N; i++){      --> N
+      for(int j=0; j<N; j=j*2){    --> N * LogN 
+       stmt;                       --> N * LogN 
+      }                  
+     }
+    
+   O(2NLogN + N) = O(NLogN)
+   
+   
+## Summary 
 
+  Loop  | Time Complexity | 
+----|---|
+| for(int i=0; i<N; i++)| O(N) |
+| for(int i=N; i>0; i--) | O(N) | 
+|for(int i=1; i<N; i=i+2) | O(N) | 
+|for(int i=0; i<N; i=i*2) | O(Log N base 2) |
+| for(int i=0; i<N; i=i*3) | O(Log N base 3) |
+| for(int i=0; i<N; i=i/2) | O(Log N base 2) |
+
+    
 ## Classes of Functions
 
 ## Asymtotic Analysis
