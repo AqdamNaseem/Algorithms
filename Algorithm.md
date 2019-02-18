@@ -12,9 +12,14 @@ Algorithm is a step-by-step procedure, which defines a set of instructions to be
 
 Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation. They are the following −
 
-| Priori Analysis | Posterior Analysis |
-|-----------------|-----------------|
-|This is a theoretical analysis of an algorithm which refers to its time and space complexity analysis using mathematical (algebraic) methods or using a theoritical model such as a finite state machine. (In short, analysis prior to running on real machine.)Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.|This is an empirical analysis of an algorithm which refers to the statistical analysis of its space and time complexity after it is actualy run on a practical machine. (in short, the selected algorithm is implemented using programming language, then executed on target computer machine and analysed).|
+### Priori Analysis
+
+This is a theoretical analysis of an algorithm which refers to its time and space complexity analysis using mathematical (algebraic) methods or using a theoritical model such as a finite state machine. (In short, analysis prior to running on real machine.) Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.
+
+
+### Posterior Analysis
+
+This is an empirical analysis of an algorithm which refers to the statistical analysis of its space and time complexity after it is actualy run on a practical machine. (in short, the selected algorithm is implemented using programming language, then executed on target computer machine and analysed).
 
 ## Algorithm Complexity
 
