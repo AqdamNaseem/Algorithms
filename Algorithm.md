@@ -230,6 +230,39 @@ Theta --> Average bound of a function <br />
   
   f(n)= Theta(g(n)) if c, c1 and b are positive constants
   such that c1 * g(n)<=f(n) >= c * g(n) for all n > b
+  
+  
+## Comparison of function
+
+Method 1 : Derive sample values
+
+For Example -
+
+n^2 vs n^3<br />
+2^2 < 2^3
+ 
+Obvioulsy n^3 is greater than n^2
+
+
+Method 2 : Apply Log on both sides
+
+__Helpul formulas__<br />
+- Log ab = Log a + Log b <br />
+- Log a/b = Log a - Log b <br />
+- Log a^b = b Log a <br />
+- a ^ Log b base c = b ^ Log a base c <br />
+- a ^ n then b = Log N base a <br />
+
+For Example -
+
+f(n)=(n^2Logn) vs g(n)=n(Logn)^10<br />
+
+Apply Log on both sides
+
+Logn^2 + LogLogn vs Logn + Log(Logn)^10<br/>
+or, 2Logn + LogLogN > Logn + 10Log(Logn) as LogLogn is smaller than LogN <br/>
+
+
 
 
 ## Algorithm Design Techniques
