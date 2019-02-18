@@ -26,6 +26,10 @@ __Space Factor__ − Space is measured by counting the maximum memory space requ
 
 The complexity of an algorithm f(n) gives the running time and/or the storage space required by the algorithm in terms of n as the size of input data.
 
+## Time Complexity 
+
+## Classes of Functions
+
 ## Asymtotic Analysis
 
 
@@ -35,9 +39,9 @@ The following is a list of several popular design approaches:
 
  - __Divide and Conquer Approach__ : It is a top-down approach. The algorithms which follow the divide & conquer techniques involve three steps:
 
-- Divide the original problem into a set of subproblems.
-- Solve every subproblem individually, recursively.
-- Combine the solution of the subproblems (top level) into a solution of the whole original problem.
+1. Divide the original problem into a set of subproblems.
+2. Solve every subproblem individually, recursively.
+3. Combine the solution of the subproblems (top level) into a solution of the whole original problem.
 
 - __Greedy Technique__ : Greedy method is used to solve the optimization problem. An optimization problem is one in which we are given a set of input values, which are required either to be maximized or minimized (known as objective), i.e. some constraints or conditions.
 
