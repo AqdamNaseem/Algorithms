@@ -38,19 +38,13 @@ The complexity of an algorithm f(n) gives the running time and/or the storage sp
 The following is a list of several popular design approaches:
 
  - __Divide and Conquer Approach__ : It is a top-down approach. The algorithms which follow the divide & conquer techniques involve three steps:
-
 1. Divide the original problem into a set of subproblems.
 2. Solve every subproblem individually, recursively.
 3. Combine the solution of the subproblems (top level) into a solution of the whole original problem.
 
-- __Greedy Technique__ : Greedy method is used to solve the optimization problem. An optimization problem is one in which we are given a set of input values, which are required either to be maximized or minimized (known as objective), i.e. some constraints or conditions.
+- __Greedy Technique__ : Greedy method is used to solve the optimization problem. An optimization problem is one in which we are given a set of input values, which are required either to be maximized or minimized (known as objective), i.e. some constraints or conditions. Greedy Algorithm always makes the choice (greedy criteria) looks best at the moment, to optimize a given objective. The greedy algorithm doesn't always guarantee the optimal solution however it generally produces a solution that is very close in value to the optimal.
 
-Greedy Algorithm always makes the choice (greedy criteria) looks best at the moment, to optimize a given objective.
-The greedy algorithm doesn't always guarantee the optimal solution however it generally produces a solution that is very close in value to the optimal.
-
-- __Dynamic Programming__ : Dynamic Programming is a bottom-up approach we solve all possible small problems and then combine them to obtain solutions for bigger problems.
-
-This is particularly helpful when the number of copying subproblems is exponentially large. Dynamic Programming is frequently related to Optimization Problems.
+- __Dynamic Programming__ : Dynamic Programming is a bottom-up approach we solve all possible small problems and then combine them to obtain solutions for bigger problems. This is particularly helpful when the number of copying subproblems is exponentially large. Dynamic Programming is frequently related to Optimization Problems.
 
 - __Branch and Bound__ : In Branch & Bound algorithm a given subproblem, which cannot be bounded, has to be divided into at least two new restricted subproblems. Branch and Bound algorithm are methods for global optimization in non-convex problems. Branch and Bound algorithms can be slow, however in the worst case they require effort that grows exponentially with problem size, but in some cases we are lucky, and the method coverage with much less effort.
 
