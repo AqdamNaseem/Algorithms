@@ -296,29 +296,6 @@ The following is a list of several popular design approaches:
 
 - __Randomized Algorithm__ : A randomized algorithm uses a random number at least once during the computation make a decision.
 
-Example :
-
-__Insertion sort__
-- Design approach : Incremental
-- Sorts in place : Yes
-- Best Case : O(N)
-- Worst case : O(N^2)
-
-__Bubble Sort__
-- Design approach : Incremental
-- Sorts in place :Yes
-- Running time : O(N^2)
-
-__Selection sort__
-- Design approach : Incremental
-- Sorts in place : Yes
-- Running time : O(N^2)
-
-__Merge sort__
-- Design approach : Divide and Conquer
-- Sorts in place : No 
-- Running time : O(N Log N)
-
 ## Divide And Conquer Strategy
 
 Commom algorithms using this strategy are :
