@@ -1,4 +1,4 @@
-## Comparison of Sorting Algorithms
+# Comparison of Sorting Algorithms
 
 |Size|Bubble|Selection|Insertion|Merge|Quick|
 |----|------|---------|---------|-----|-----|
@@ -18,3 +18,48 @@ Note : Time is in milliseconds
 <p align="center">
 <img src="https://github.com/AqdamNaseem/Algorithms/blob/master/Sorting/images/Sorting_Algorithm_Comparison.png" >
 </p>
+
+Note : A sorting algorithm is said to be stable if and only if two records R and S with the same key and with R appearing before S in the original list, R must appear before S in the sorted list.
+
+## Bubble Sort
+
+- Design approach : Incremental
+- Sorts in place : Yes
+- Stable : Yes
+- Average : О(n^2)
+- Worst : О(n^2)
+- Best : О(n)
+
+Note : The majority of O(N^2) algorithms outperform bubble sort
+
+## Selection Sort
+
+- Design approach : Incremental
+- Sorts in place : Yes
+- Stable : No 
+- Running time : O(n^2)
+
+## Insertion Sort
+
+- Design approach : Incremental
+- Sorts in place : Yes
+- Stable : Yes 
+- Average : О(n^2)
+- Worst : О(n^2)
+- Best : О(n)
+
+## Merge Sort
+
+- Design approach : Divide and Conquer
+- Sorts in place : No
+- Stable : Yes 
+- Running time : O(nLogn)
+
+## Quick Sort
+
+- Design approach : Divide and Conquer
+- Sorts in place : Yes
+- Stable : No 
+- Average : О(nLogn)
+- Worst : О(n^2)
+- Best : О(nLogn)
