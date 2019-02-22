@@ -3,11 +3,11 @@ package com.aqdamnaseem.projects.sorting.merge;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class MWayMerging {
+public class MWayMerge {
 
 	private PriorityQueue<Element> queue;
 
-	public MWayMerging() {
+	public MWayMerge() {
 		queue = new PriorityQueue<>(50, new ElementComparator());
 	}
 
@@ -103,7 +103,7 @@ public class MWayMerging {
 				input[i][j] = k++;
 			}
 		}
-		MWayMerging merge = new MWayMerging();
+		MWayMerge merge = new MWayMerge();
 		int[] output = merge.mway_merge(input, 3, 3);
 		Arrays.stream(output).forEach(System.out::println);
 	}
