@@ -6,12 +6,12 @@ package com.aqdamnaseem.projects.sorting.merge;
  * Steps :  
  *     			 				merge_sort(list of elements)
  *                  		 				|
- *      				-------------------------------------------------------
- *      			   |                           |                           |
- * 					merge_sort(first half)     merge_sort(second half)        merge
+ *      				--------------------------------------------------------
+ *      			        |                           |                           |
+ * 				merge_sort(first half)     merge_sort(second half)            merge
  *                     |
  * -----------------------------------------------------------
- * |                                   |                      |
+ * |                                 |                        |
  * merge_sort(first half)     merge_sort(second half)        merge
  *
  *
